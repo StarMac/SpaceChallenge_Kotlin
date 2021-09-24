@@ -11,13 +11,13 @@ import java.lang.Exception
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var txtTotalBudgetU1: TextView
     private lateinit var txtTotalBudgetU2: TextView
-    private var simulation = Simulation(this)
+    private val simulation = Simulation(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        txtTotalBudgetU1 = findViewById(R.id.totalCostU1)
-        txtTotalBudgetU2 = findViewById(R.id.totalCostU2)
+        txtTotalBudgetU1 = findViewById(R.id.txtTotalBudgetU1)
+        txtTotalBudgetU2 = findViewById(R.id.txtTotalBudgetU2)
         val button = findViewById<Button>(R.id.btnRunSimulation)
         button.setOnClickListener(this)
     }
