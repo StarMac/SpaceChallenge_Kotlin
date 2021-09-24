@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SpaceChallenge_Kotlin</string>
+    <string name="txtphase1">phase-1.txt</string>
+    <string name="txtphase2">phase-2.txt</string>
+    <string name="rocket_u1_image">Rocket U1 image</string>
+    <string name="rocket_u2_image">Rocket U2 image</string>
+    <string name="btn_run_simulation">run simulation</string>
+    <string name="totalbudgetu1">totalBudgetU1</string>
+    <string name="totalbudgetu2">totalBudgetU2</string>
+</resources>
