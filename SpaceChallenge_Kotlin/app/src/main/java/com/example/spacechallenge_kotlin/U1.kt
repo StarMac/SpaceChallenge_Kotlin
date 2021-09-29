@@ -2,16 +2,9 @@ package com.example.spacechallenge_kotlin
 
 import java.util.*
 
-class U1 : Rocket() {
-
-    init {
-        cost = 100
-        weight = 10000
-        weightInclCargo = weight
-        maxWeight = 18000
-        chanceOfLaunchExplosion = 0.0
-        chanceOfLandingCrash = 0.0
-    }
+class U1(cost: Int = 100, weight: Int = 10000, weightInclCargo: Int = weight, maxWeight: Int = 18000,
+         chanceOfLaunchExplosion: Double = 0.0, chanceOfLandingCrash: Double = 0.0) : Rocket(cost,
+         weight, weightInclCargo, maxWeight, chanceOfLaunchExplosion, chanceOfLandingCrash) {
 
     override fun launch(): Boolean {
         chanceOfLaunchExplosion = 5.0 * (weightInclCargo - weight) / (maxWeight - weight)

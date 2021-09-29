@@ -1,30 +1,18 @@
 package com.example.spacechallenge_kotlin
 
- open class Rocket : SpaceShip {
-    internal var cost : Int = 0
-    protected var weight :Int = 0
-    protected var weightInclCargo : Int = 0
-    protected var maxWeight : Int = 0
-    protected var chanceOfLaunchExplosion : Double = 0.0
-    protected var chanceOfLandingCrash : Double = 0.0
+ open class Rocket (internal val cost: Int, protected val weight: Int, protected var weightInclCargo: Int,
+                    protected val maxWeight: Int, protected var chanceOfLaunchExplosion: Double,
+                    protected var chanceOfLandingCrash: Double) : SpaceShip {
 
-    override fun launch(): Boolean {
-        return true
-    }
+    override fun launch(): Boolean = true
 
-    override fun land(): Boolean {
-        return true
-    }
+    override fun land(): Boolean = true
 
-    override fun canCarry(item: Item): Boolean {
-        return weightInclCargo + item.weight <= maxWeight
-    }
+    override fun canCarry(item: Item): Boolean = weightInclCargo + item.weight <= maxWeight
 
-    override fun carry(item: Item) {
+    override fun carry(item: Item){
         weightInclCargo += item.weight
     }
 
-     fun getCost(): Int {
-        return cost
-    }
+     fun getCost(): Int = cost
 }
